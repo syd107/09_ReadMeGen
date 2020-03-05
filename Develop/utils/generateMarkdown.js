@@ -1,7 +1,8 @@
-function generateMarkdown(data) {
+function generateMarkdown(githubData, promptData) {
   return `
-# ${data.title}
-
+# ${githubData.login}
+## ${promptData.description}
+## ${githubData.name}
 `;
 }
 
