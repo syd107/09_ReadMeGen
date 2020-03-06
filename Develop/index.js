@@ -14,7 +14,7 @@ const markdown = require("./utils/generateMarkdown");
 const axios = require("axios");
 const inquirer = require("inquirer");
 const util = require("util");
-// const writeFileAsync = util.promisify(fs.writeFile);
+const writeFileAsync = util.promisify(fs.writeFile);
 
 //  moving stuff up here temporarily to check stuff
 
@@ -34,7 +34,7 @@ inquirer
     {
       type: "input",
       name: "description",
-      message: "Please write a short description of your project"
+      message: "Please write a short description of your project:"
     },
     {
       type: "input",
@@ -98,31 +98,47 @@ var writeFile = (githubData, promptData) => {
     }
   });
   console.log("file has been saved");
+  //   console.log(githubData);
 };
 
-// step 4 html
-function generateHtml(answers) {
-  return `
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <h1 class="display-4">Hi! My name is ${answers.name}</h1>
-      <p class="lead">I am from ${answers.location}.</p>
-      <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
-      <ul class="list-group">
-        <li class="list-group-item">My GitHub username is ${answers.github}</li>
-        <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
-      </ul>
-    </div>
-  </div>
-  </body>
-  </html>`;
-}
+// // step 4 html
+// function generateHtml(answers) {
+//   return `
+//   <!DOCTYPE html>
+//   <html lang="en">
+//   <head>
+//     <meta charset="UTF-8">
+//     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+//     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+//     <title>Document</title>
+//   </head>
+//   <body>
+//     <div class="jumbotron jumbotron-fluid">
+//     <div class="container">
+//       <h1 class="display-4">Hi! My name is ${answers.name}</h1>
+//       <p class="lead">I am from ${answers.location}.</p>
+//       <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
+//       <ul class="list-group">
+//         <li class="list-group-item">My GitHub username is ${answers.github}</li>
+//         <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
+//       </ul>
+//     </div>
+//   </div>
+//   </body>
+//   </html>`;
+// }
+// async function init() {
+//   console.log("hi");
+//   try {
+//     const answers = await promptData();
+
+//     const html = generateHTML(answers);
+
+//     await writeFileAsync("index.js", js);
+
+//     console.log("Successfully wrote to index.js");
+//   } catch (err) {
+//     console.log(err);
+//   }
+// }
+// init();
