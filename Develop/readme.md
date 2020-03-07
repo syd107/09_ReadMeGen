@@ -1,25 +1,37 @@
 
-  # rewfe
+  # homework 9
   [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/syd107)
   ## Description
-  fwf
+  this is the description of my project
   ## Table of Contents 
+  *[Installation](#installation)
+
+  *[License](#license)
+
+  *[Testing](#testing)
+  
+  *[Usage](#usage)
+
+  *[Contributing](#contributing)
+  
+  *[Questions](#questions)
+  
   ## Installation
   To install necessary dependencies, run the following command:
   
-  `wfe`
+  `npm i`
   
   ## License
-  fewfw
+  i dunno
   ## Testing
   To run tests, run the following command:
 
-  `fewfweffewf`
+  `npm run test`
 
   ## Usage
-  fewfewfewf
+  lots of things!
   ## Contributing
-  fewffwf
+  that's for me to know and you to find out
   ## Questions?
 **Sydney Krantz**
 

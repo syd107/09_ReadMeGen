@@ -5,6 +5,18 @@ function generateMarkdown(githubData, promptData) {
   ## Description
   ${promptData.description}
   ## Table of Contents 
+  \*[Installation](#installation)
+
+  \*[License](#license)
+
+  \*[Testing](#testing)
+  
+  \*[Usage](#usage)
+
+  \*[Contributing](#contributing)
+  
+  \*[Questions](#questions)
+  
   ## Installation
   To install necessary dependencies, run the following command:
   
